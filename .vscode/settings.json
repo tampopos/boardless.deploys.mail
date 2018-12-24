@@ -1,0 +1,30 @@
+{
+  "files.exclude": {
+    "**/.data": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "node_modules": true,
+    "**/bin": true,
+    "**/obj": true
+  },
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "editor.tabCompletion": "on",
+  "prettier.semi": true,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "cSpell.words": ["boardless"],
+  "cSpell.ignoreRegExpList": ["/.*ー/"],
+  "cSpell.ignorePaths": [
+    "**/package-lock.json",
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/**",
+    "**/appsettings.*.json",
+    ".vscode"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "rebornix.project-snippets",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
