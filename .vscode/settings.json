@@ -17,7 +17,10 @@
   "prettier.semi": true,
   "prettier.tabWidth": 2,
   "prettier.singleQuote": true,
-  "cSpell.words": ["boardless"],
+  "cSpell.words": [
+    "boardless",
+    "tampopos"
+],
   "cSpell.ignoreRegExpList": ["/.*ー/"],
   "cSpell.ignorePaths": [
     "**/package-lock.json",

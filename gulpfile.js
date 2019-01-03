@@ -37,10 +37,7 @@ gulp.task('watch-sass', function() {
   return gulp.watch(['./src/**/*.scss'], gulp.task(['build']));
 });
 gulp.task('watch-pug', function() {
-  return gulp.watch(
-    ['./src/**/*.pug', '!./src/**/_*.pug'],
-    gulp.task(['build-pug'])
-  );
+  return gulp.watch(['./src/**/*.pug'], gulp.task(['build-pug']));
 });
 gulp.task(
   'watch',
@@ -49,6 +46,7 @@ gulp.task(
 gulp.task('web', function() {
   gulp.src('dist').pipe(
     webserver({
+      host: '0.0.0.0',
       livereload: true,
       directoryListing: {
         enable: true,

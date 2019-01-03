@@ -1,0 +1,11 @@
+doctype html
+block vars
+html(lang=culture.lang)
+  head
+    include _head.pug
+    block styles
+  body(class=key)
+    .contents
+      include _header.pug
+      block contents
+      include _footer.pug

@@ -1,0 +1,25 @@
+extends ./template/_layout.pug
+
+block vars
+  include ./template/_config.pug
+  - 
+    var page = {
+      title : 'ようこそ Boardless へ',
+      description : 'Boardless サービス利用開始メール'
+    }
+  - var culture = cultures['ja']
+
+block styles
+  link(rel="stylesheet", href="../styles/welcome.css")
+
+block contents
+  table.welcome.container
+    tr
+      td.subject ようこそ Boardless へ
+    tr
+      td.body サインインしてサービスを開始してください。
+    tr
+      td.sign-in
+        a.btn.primary(href="-url-") サインイン
+    tr
+      td.attention 本メールの有効期限は２日間です。
