@@ -16,10 +16,17 @@
   },
   "homepage": "https://github.com/tampopos/boardless.deploys.mail#readme",
   "devDependencies": {
+    "@types/dotenv": "^6.1.0",
+    "@types/node": "^10.12.18",
     "gulp": "^4.0.0",
     "gulp-juice": "^0.1.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0"
   }
 }
