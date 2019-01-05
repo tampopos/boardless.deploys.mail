@@ -1,8 +1,8 @@
 {
   "templateSettings": [
     {
-      "name": "welcome2",
-      "versionName": "1.0.0",
+      "name": "welcome",
+      "versionName": "welcome-1.0.0",
       "subject": "ようこそ Boardless へ",
       "path": "./dist/mails/welcome.html"
     }

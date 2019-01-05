@@ -10,7 +10,7 @@
     "watch": "run-p watch:*",
     "watch:mail": "gulp watch",
     "watch:tsc": "tsc --watch",
-    "register": "node dist/scripts/index.js"
+    "upload": "node dist/scripts/index.js"
   },
   "repository": {
     "type": "git",
