@@ -32,7 +32,7 @@ export const getAllLegacyTemplateAsync = async () => {
     const [response] = await client.request(request);
     return response.body.templates as Template[];
   } catch (error) {
-    console.error(error);
+    console.error(JSON.stringify(error));
     return null;
   }
 };
@@ -46,7 +46,7 @@ export const getTemplateAsync = async (templateId: string) => {
     const [response] = await client.request(request);
     return response.body as Template;
   } catch (error) {
-    console.error(error);
+    console.error(JSON.stringify(error));
     return null;
   }
 };
@@ -61,7 +61,7 @@ export const createTemplateAsync = async (template: Partial<Template>) => {
     const [response] = await client.request(request);
     return response.body as Template;
   } catch (error) {
-    console.error(error);
+    console.error(JSON.stringify(error));
     return null;
   }
 };
@@ -75,7 +75,7 @@ export const deleteTemplateAsync = async (templateId: string) => {
     const [response] = await client.request(request);
     return response.statusCode === 204;
   } catch (error) {
-    console.error(error);
+    console.error(JSON.stringify(error));
     return false;
   }
 };
@@ -93,7 +93,7 @@ export const createTemplateVersionAsync = async (
     const [response] = await client.request(request);
     return response.body as Version;
   } catch (error) {
-    console.error(error);
+    console.error(JSON.stringify(error));
     return null;
   }
 };
@@ -112,7 +112,7 @@ export const updateTemplateVersionAsync = async (
     const [response] = await client.request(request);
     return response.body as Version;
   } catch (error) {
-    console.error(error);
+    console.error(JSON.stringify(error));
     return null;
   }
 };
@@ -129,7 +129,7 @@ export const deleteTemplateVersionAsync = async (
     const [response] = await client.request(request);
     return response.statusCode === 204;
   } catch (error) {
-    console.error(error);
+    console.error(JSON.stringify(error));
     return false;
   }
 };
@@ -139,7 +139,7 @@ export const getContent = (path: string) => {
     const data = fs.readFileSync(path);
     return data.toString();
   } catch (error) {
-    console.error(error);
+    console.error(JSON.stringify(error));
     return null;
   }
 };

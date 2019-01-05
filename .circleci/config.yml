@@ -26,6 +26,7 @@ jobs:
       - run:
           name: upload
           command: npm run upload
+
   publish:
     executor: node
     steps:
@@ -53,6 +54,7 @@ workflows:
   build:
     jobs:
       - build:
+          context: sendgrid-publish
           filters:
             branches:
               only: /.*/
