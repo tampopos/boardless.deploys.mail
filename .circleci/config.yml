@@ -25,10 +25,17 @@ jobs:
           name: build
           command: npm run build
       - run:
+          name: show environment
+          command: echo $SENDGRID_API_KEY
+      - run:
+          name: set environment
+          command: echo 'export SENDGRID_API_KEY="${SENDGRID_API_KEY}"' >> $BASH_ENV
+      - run:
+          name: show environment
+          command: echo $SENDGRID_API_KEY
+      - run:
           name: upload
           command: npm run upload
-          environment:
-            SENDGRID_API_KEY: ${SENDGRID_API_KEY}
 workflows:
   version: 2
   build:
