@@ -19,6 +19,12 @@ jobs:
     steps:
       - checkout
       - run:
+          name: install
+          command: npm i
+      - run:
+          name: build
+          command: npm run build
+      - run:
           name: upload
           command: npm run upload
           environment:
@@ -29,12 +35,12 @@ workflows:
     jobs:
       - build:
           filters:
-            tags:
+            branches:
               only: /.*/
+            tags:
+              ignore: /.*/
       - publish:
           context: sendgrid-publish
-          requires:
-            - build
           filters:
             branches:
               ignore: /.*/
