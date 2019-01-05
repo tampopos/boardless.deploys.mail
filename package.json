@@ -3,7 +3,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp run"
+    "start": "run-p watch:tsc gulp run",
+    "build": "run-p build:*",
+    "build:mail": "gulp build",
+    "build:tsc": "tsc",
+    "watch": "run-p watch:*",
+    "watch:mail": "gulp watch",
+    "watch:tsc": "tsc --watch",
+    "register": "node dist/scripts/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,10 +30,12 @@
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
     "gulp-webserver": "^0.9.1",
+    "npm-run-all": "^4.1.5",
     "tslint": "^5.12.0",
     "typescript": "^3.2.2"
   },
   "dependencies": {
+    "@sendgrid/client": "^6.3.0",
     "dotenv": "^6.2.0"
   }
 }

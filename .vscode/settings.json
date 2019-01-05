@@ -19,6 +19,7 @@
   "prettier.singleQuote": true,
   "cSpell.words": [
     "boardless",
+    "sendgrid",
     "tampopos"
 ],
   "cSpell.ignoreRegExpList": ["/.*ー/"],
